@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3140 Lake Shore Dr | Coming Soon for Lease | Riviera Beach</title>
+<meta name="description" content="20 newly renovated apartments on the Intracoastal in Riviera Beach, with a private dock and pool. Join the leasing waitlist.">
+<meta property="og:title" content="3140 Lake Shore Dr | Coming Soon for Lease">
+<meta property="og:description" content="Live the Palm Beach lifestyle on the water. Only 20 units. Be first on the list.">
+<meta property="og:image" content="img/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F6F1E7; --sand:#EADFCB; --ink:#1C2A2E; --muted:#5B6A6E;
+    --sea:#1F4E5A; --green:#1E4D3A; --gold:#C9A45C; --white:#fff;
+    --serif:"Lora",Georgia,serif; --sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:var(--sea)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+
+  /* top bar */
+  .bar{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:16px 22px}
+  .bar .brand{background:rgba(255,255,255,.92);border-radius:12px;padding:6px 12px;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+  .bar img{height:40px;width:auto;display:block}
+  .btn{display:inline-block;background:var(--gold);color:#1b1b1b;font-weight:700;text-decoration:none;padding:13px 22px;border-radius:999px;letter-spacing:.2px;border:0;cursor:pointer;font-size:16px}
+  .btn:hover{filter:brightness(1.05)}
+  .btn.small{padding:9px 16px;font-size:14px}
+  .btn.ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.6)}
+
+  /* hero */
+  .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;color:#fff;background:#14303a url(img/hero.jpg) 62% 55%/cover no-repeat}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,25,30,.35) 0%,rgba(10,25,30,.05) 35%,rgba(10,25,30,.72) 100%)}
+  .hero .wrap{position:relative;z-index:2;padding-bottom:9vh;width:100%}
+  .pill{display:inline-block;background:var(--green);color:#fff;font-size:13px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;padding:7px 14px;border-radius:999px}
+  .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(40px,7vw,78px);line-height:1.05;margin:16px 0 8px}
+  .hero .tag{font-family:var(--serif);font-size:clamp(20px,2.6vw,28px);margin:0 0 6px}
+  .hero .sub{font-size:clamp(15px,1.8vw,18px);opacity:.92;margin:0 0 26px}
+  .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  @media (max-width:700px){
+    .hero{background:#1C2A2E url(img/hero-m.jpg) top center/100% auto no-repeat;min-height:0;display:block}
+    .hero::after{background:linear-gradient(180deg,rgba(10,25,30,.25) 0,rgba(10,25,30,0) 18%,rgba(28,42,46,0) 44vw,#1C2A2E 66vw)}
+    .hero .wrap{padding-top:58vw;padding-bottom:40px}
+  }
+
+  /* strip */
+  .strip{background:var(--sea);color:#fff}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:22px}
+  .strip div{text-align:center}
+  .strip b{display:block;font-family:var(--serif);font-size:26px;font-weight:600}
+  .strip span{font-size:13px;letter-spacing:1px;text-transform:uppercase;opacity:.85}
+  @media (max-width:700px){.strip .wrap{grid-template-columns:repeat(2,1fr);row-gap:18px}}
+
+  section{padding:76px 0}
+  .eyebrow{color:var(--sea);font-weight:700;font-size:13px;letter-spacing:1.8px;text-transform:uppercase;margin:0 0 8px}
+  h2{font-family:var(--serif);font-weight:600;font-size:clamp(30px,4vw,44px);line-height:1.15;margin:0 0 14px}
+  .lead{color:var(--muted);max-width:720px;margin:0 0 34px}
+
+  /* gallery */
+  .grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+  .card{position:relative;border-radius:14px;overflow:hidden;background:#ddd}
+  .card img{width:100%;height:100%;object-fit:cover}
+  .card .cap{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;color:#fff;background:linear-gradient(180deg,transparent,rgba(0,0,0,.65))}
+  .card .cap b{font-family:var(--serif);font-size:21px;font-weight:600;display:block}
+  .card .cap span{font-size:14px;opacity:.9}
+  .note{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;padding:5px 10px;border-radius:6px}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g4 .card{aspect-ratio:4/3}
+  .c-a{grid-column:span 4;aspect-ratio:16/10}
+  .c-b{grid-column:span 2}
+  .c-c{grid-column:span 3;aspect-ratio:4/3}
+  @media (max-width:800px){.grid,.g4{grid-template-columns:1fr}.c-a,.c-b,.c-c{grid-column:auto;aspect-ratio:4/3}}
+
+  /* video */
+  .video{background:var(--ink);color:#fff}
+  .video h2{color:#fff}
+  .video .lead{color:#c8d3d5}
+  .video video{width:100%;border-radius:14px;background:#000;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+
+  /* area */
+  .area{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+  .area ul{list-style:none;padding:0;margin:0}
+  .area li{padding:14px 0;border-bottom:1px solid var(--sand)}
+  .area li b{display:block;font-family:var(--serif);font-size:20px;font-weight:600}
+  .area li span{color:var(--muted);font-size:15px}
+  .area .pics{display:grid;gap:14px}
+  .area .pics img{border-radius:14px;aspect-ratio:16/10;object-fit:cover;width:100%}
+  @media (max-width:800px){.area{grid-template-columns:1fr}}
+
+  /* waitlist */
+  .wait{background:var(--sand)}
+  .wait .box{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:start}
+  .wait .box>div:first-child{position:sticky;top:24px}
+  .urgent{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--green);margin:0 0 10px}
+  .steps{padding-left:20px;color:var(--ink)}
+  .steps li{margin-bottom:8px}
+  .fine{font-size:14px;color:var(--muted)}
+  .formbox{background:#fff;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,.08);overflow:hidden}
+  .formbox iframe{width:100%;height:1900px;border:0;display:block}
+  @media (max-width:800px){.wait .box>div:first-child{position:static}.wait .box{grid-template-columns:1fr}.formbox iframe{height:2150px}}
+
+  /* agent */
+  .agent{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+  .agent img.head{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.12)}
+  .agent h3{font-family:var(--serif);font-size:24px;margin:0;font-weight:600}
+  .agent p{margin:2px 0;color:var(--muted)}
+  .agent .logo{height:64px;width:auto;margin-left:auto}
+
+  footer{background:var(--ink);color:#b9c4c6;font-size:13.5px;padding:34px 0 90px}
+  footer a{color:#e6ecec}
+  footer .eho{display:flex;gap:10px;align-items:center;margin-bottom:10px;color:#e6ecec;font-weight:600}
+  footer .eho svg{flex:0 0 auto}
+
+  /* sticky mobile cta */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;padding:10px 14px;background:rgba(246,241,231,.97);box-shadow:0 -4px 18px rgba(0,0,0,.12)}
+  .sticky .btn{display:block;text-align:center}
+  @media (max-width:800px){.sticky{display:block}}
+
+  /* cookie notice */
+  .cookie{position:fixed;left:14px;right:14px;bottom:14px;z-index:40;max-width:620px;margin:0 auto;background:#fff;color:var(--ink);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.25);padding:18px 18px 16px;font-size:14.5px;display:none}
+  .cookie p{margin:0 0 12px}
+  .cookie .row{display:flex;gap:10px;flex-wrap:wrap}
+  .cookie button{border:0;border-radius:999px;padding:10px 18px;font-weight:700;cursor:pointer;font-size:14px}
+  .cookie .ok{background:var(--green);color:#fff}
+  .cookie .no{background:#ECE6DA;color:var(--ink)}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <span class="brand"><img src="img/logo.png" alt="Southern Select Realty"></span>
+  <a class="btn small" href="#waitlist">Join the Waitlist</a>
+</header>
+
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <span class="pill">Coming Soon for Lease</span>
+    <h1>3140 Lake Shore Dr</h1>
+    <p class="tag">Live the Palm Beach lifestyle, on the water.</p>
+    <p class="sub">20 newly renovated apartments on the Intracoastal in Riviera Beach, with a private dock and pool.</p>
+    <div class="ctas">
+      <a class="btn" href="#waitlist">Be First on the List</a>
+      <a class="btn ghost" href="#tour">Watch the Video</a>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div><b>20</b><span>Apartments only</span></div>
+    <div><b>Intracoastal</b><span>Waterfront location</span></div>
+    <div><b>Private</b><span>Dock</span></div>
+    <div><b>Pool</b><span>On site</span></div>
+  </div>
+</div>
+
+<section id="property">
+  <div class="wrap">
+    <p class="eyebrow">The property</p>
+    <h2>A fresh start on the water</h2>
+    <p class="lead">3140 Lake Shore Dr is being fully renovated. Twenty apartments sit right on the Intracoastal Waterway, with a private dock and a pool, minutes from Singer Island's beaches.</p>
+    <div class="grid g4">
+      <div class="card">
+        <img src="img/pool.jpg" alt="Pool surrounded by palms" loading="lazy">
+        <div class="cap"><b>Pool</b><span>Steps from the water</span></div>
+      </div>
+      <div class="card">
+        <img src="img/dock.jpg" alt="Private dock over the Intracoastal" loading="lazy">
+        <div class="cap"><b>Private Dock</b><span>Step out onto the water</span></div>
+      </div>
+      <div class="card">
+        <img src="img/apartments.jpg" alt="Aerial view of the 3140 Lake Shore Dr apartments on the Intracoastal" loading="lazy">
+        <div class="cap"><b>20 Apartments</b><span>On the Intracoastal in Riviera Beach</span></div>
+      </div>
+      <div class="card">
+        <img src="img/views.jpg" alt="Rendering of an end-unit living room with water views" loading="lazy">
+        <span class="note">Virtual rendering · end unit</span>
+        <div class="cap"><b>Intracoastal Views</b><span>Select units look across the water toward Singer Island</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="video" id="tour">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--gold)">Take a look</p>
+    <h2>See 3140 Lake Shore Dr</h2>
+    <p class="lead">Aerial views of the property, the dock and the neighborhood.</p>
+    <video controls playsinline preload="none" poster="img/poster.jpg">
+      <source src="3140-tour.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap area">
+    <div>
+      <p class="eyebrow">The neighborhood</p>
+      <h2>Riviera Beach, on the water</h2>
+      <p class="lead">Beaches, parks and the water taxi are all close by.</p>
+      <ul>
+        <li><b>Singer Island beaches</b><span>Just across the Intracoastal</span></li>
+        <li><b>Ocean Reef Park</b><span>Snorkeling, picnic areas and the beach</span></li>
+        <li><b>John D. MacArthur Beach State Park</b><span>Trails, kayaking and an unspoiled stretch of coast</span></li>
+        <li><b>Riviera Beach Marina Village</b><span>Waterfront events and the marina</span></li>
+        <li><b>Peanut Island</b><span>A water taxi ride away</span></li>
+      </ul>
+    </div>
+    <div class="pics">
+      <img src="img/singer.jpg" alt="Aerial view across the Intracoastal toward Singer Island" loading="lazy">
+      <img src="img/inlet.jpg" alt="Aerial view of the Intracoastal and the inlet" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="wait" id="waitlist">
+  <div class="wrap box">
+    <div>
+      <p class="eyebrow">Leasing waitlist</p>
+      <h2>Be first on the list</h2>
+      <p class="urgent">Only 20 units, and they won't last long.</p>
+      <ol class="steps">
+        <li>Fill out the short form.</li>
+        <li>You'll get an email confirming we received it.</li>
+        <li>When the apartments are ready, the waitlist is contacted in the order received.</li>
+      </ol>
+      <p class="fine">We do not know the ready date yet. Joining the waitlist does not reserve a unit or guarantee approval.</p>
+      <p class="fine">Questions? Email <a href="mailto:csevillaagency@gmail.com?subject=Waitlist%203140">csevillaagency@gmail.com</a> with "Waitlist 3140" in the subject.</p>
+    </div>
+    <div class="formbox">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfwyFod7a5CBIckLlsKz4pG3KIagiigNP6K-3bLMA9rGDYxAg/viewform?embedded=true" title="3140 Lake Shore Dr leasing waitlist form" loading="lazy">Loading the form…</iframe>
+    </div>
+  </div>
+</section>
+
+<section style="padding:54px 0">
+  <div class="wrap agent">
+    <img class="head" src="img/carlos.png" alt="Carlos Sevilla">
+    <div>
+      <h3>Carlos Sevilla, REALTOR&reg;</h3>
+      <p>Southern Select Realty · Lic. SL3589106</p>
+      <p><a href="mailto:csevillaagency@gmail.com?subject=Waitlist%203140">csevillaagency@gmail.com</a></p>
+    </div>
+    <img class="logo" src="img/logo.png" alt="Southern Select Realty logo">
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="eho">
+      <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 1 11h3v10h16V11h3L12 2zm-6 9.6L12 6.6l6 5V19H6v-7.4zM8 12h8v2H8zm0 3h8v2H8z"/></svg>
+      Equal Housing Opportunity
+    </div>
+    <p>Southern Select Realty · 202 N Swinton Ave, Delray Beach, FL 33444. Renderings show planned finishes and are for illustration only; actual units, finishes, views and amenities may vary. Information is believed accurate but not guaranteed and is subject to change. Not every unit has water views.</p>
+    <p><a href="privacy.html">Privacy Policy</a> · <a href="#" onclick="openCookies();return false;">Cookie settings</a></p>
+  </div>
+</footer>
+
+<div class="sticky"><a class="btn" href="#waitlist">Join the Waitlist · Only 20 Units</a></div>
+
+<div class="cookie" id="cookie" role="dialog" aria-label="Cookie notice">
+  <p>We use cookies and a visitor identification service to understand who visits this page and to email you about rental availability at 3140 Lake Shore Dr. We never sell or share your information. See our <a href="privacy.html">Privacy Policy</a>.</p>
+  <div class="row">
+    <button class="ok" onclick="setConsent('yes')">Accept</button>
+    <button class="no" onclick="setConsent('no')">Decline</button>
+  </div>
+</div>
+
+<script>
+  // Visitor identification loads only after the visitor accepts.
+  function loadTracking(){
+    if (window.__trk) return; window.__trk = true;
+    // RETENTION_SCRIPT_GOES_HERE (added after Retention.com account is set up)
+  }
+  function getConsent(){ try { return localStorage.getItem('ssr3140_consent'); } catch(e){ return null; } }
+  function setConsent(v){
+    try { localStorage.setItem('ssr3140_consent', v); } catch(e){}
+    document.getElementById('cookie').style.display = 'none';
+    if (v === 'yes') loadTracking();
+  }
+  function openCookies(){ document.getElementById('cookie').style.display = 'block'; }
+  (function(){
+    var c = getConsent();
+    if (c === 'yes') loadTracking();
+    else if (c !== 'no') document.getElementById('cookie').style.display = 'block';
+  })();
+</script>
+</body>
+</html>
